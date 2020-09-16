@@ -4,11 +4,11 @@ const talkingCalendar = function (date) {
         "April", "May", "June", "July", "August",
         "September", "October", "November", "December"];
     let dateArray = date.split("/");
-    //
+
     let year = dateArray[0];
     let monthIndex = Number(dateArray[1]) - 1;
     let month = months[monthIndex];
-    // day
+
     let dayNumber = Number(dateArray[2]);
     let dayOrdinal = "";
     if (dayNumber == 1 || dayNumber == 21 || dayNumber == 31) {
@@ -23,7 +23,7 @@ const talkingCalendar = function (date) {
     else {
         dayOrdinal = dayNumber + "th";
     }
-    //
+
     let readableDate = month + " " + dayOrdinal + ", " + year;
     return readableDate;
 };
